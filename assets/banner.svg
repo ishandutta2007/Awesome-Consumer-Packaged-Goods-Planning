@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Card/Overlay Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Primary Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.5" stroke-opacity="0.3"/>
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bgGrad)"/>
+  <rect width="1200" height="400" fill="url(#grid)"/>
+
+  <!-- Dynamic Animated Graph & Waves in Background (Behind Text) -->
+  <g opacity="0.35">
+    <!-- Pulse Line 1 -->
+    <path d="M 50,320 Q 200,280 350,330 T 650,220 T 950,260 T 1150,150" fill="none" stroke="#38bdf8" stroke-width="3">
+      <animate attributeName="d" 
+        values="M 50,320 Q 200,280 350,330 T 650,220 T 950,260 T 1150,150;
+                M 50,300 Q 200,340 350,290 T 650,260 T 950,210 T 1150,180;
+                M 50,320 Q 200,280 350,330 T 650,220 T 950,260 T 1150,150" 
+        dur="10s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Pulse Line 2 -->
+    <path d="M 50,350 Q 250,310 450,340 T 750,280 T 1050,220 T 1150,190" fill="none" stroke="#818cf8" stroke-width="2" stroke-dasharray="6,6">
+      <animate attributeName="d" 
+        values="M 50,350 Q 250,310 450,340 T 750,280 T 1050,220 T 1150,190;
+                M 50,330 Q 250,350 450,300 T 750,240 T 1050,260 T 1150,160;
+                M 50,350 Q 250,310 450,340 T 750,280 T 1050,220 T 1150,190" 
+        dur="8s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Animated Data Nodes -->
+    <circle cx="350" cy="330" r="5" fill="#38bdf8" filter="url(#glow)">
+      <animate attributeName="cy" values="330;290;330" dur="10s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="650" cy="220" r="6" fill="#818cf8" filter="url(#glow)">
+      <animate attributeName="cy" values="220;260;220" dur="10s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="950" cy="260" r="5" fill="#c084fc" filter="url(#glow)">
+      <animate attributeName="cy" values="260;210;260" dur="10s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Decorative Pills / Tags (Positioned away from main title foreground) -->
+  <g transform="translate(850, 40)" opacity="0.85">
+    <rect x="0" y="0" width="130" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+    <text x="65" y="20" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">📦 CPG SaaS</text>
+  </g>
+  <g transform="translate(1000, 40)" opacity="0.85">
+    <rect x="0" y="0" width="140" height="32" rx="16" fill="#1e293b" stroke="#818cf8" stroke-width="1"/>
+    <text x="70" y="20" fill="#818cf8" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">📈 Demand &amp; S&amp;OP</text>
+  </g>
+
+  <!-- Main Content Foreground Box -->
+  <rect x="60" y="70" width="1080" height="260" rx="16" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.5" filter="url(#glow)"/>
+
+  <!-- Title and Subtitle (Crisp & Clear in Foreground) -->
+  <g transform="translate(100, 140)">
+    <!-- Badge -->
+    <rect x="0" y="0" width="220" height="28" rx="6" fill="#38bdf8" fill-opacity="0.15" stroke="#38bdf8" stroke-width="1"/>
+    <text x="110" y="18" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1" text-anchor="middle">CURATED ECOSYSTEM LIST</text>
+
+    <!-- Main Title -->
+    <text x="0" y="70" fill="#ffffff" font-family="system-ui, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.5">
+      Awesome CPG Planning 🛒📦
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="110" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="19" font-weight="400">
+      Demand Planning, Supply Chain, S&amp;OP/IBP &amp; Open-Source Inventory Optimization
+    </text>
+
+    <!-- Key Metrics Badges in Banner -->
+    <g transform="translate(0, 140)">
+      <text x="0" y="0" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="14" font-weight="600">
+        💡 Top Enterprise SaaS • ⚡ Open-Source Time-Series &amp; Solvers • 📊 Market Analytics
+      </text>
+    </g>
+  </g>
+
+  <!-- Accent Line at Bottom of Card -->
+  <rect x="60" y="326" width="1080" height="4" rx="2" fill="url(#accentGrad)"/>
+</svg>
