@@ -52,7 +52,7 @@ The table below summarizes leading commercial CPG demand and supply planning pla
 
 Open-source tools provide foundational forecasting models, mathematical optimization solvers, and data orchestration pipelines for building custom CPG supply chain algorithms.
 
-Repositories below are sorted by **GitHub Star Count** (descending).
+Repositories below are sorted by **GitHub Stars_Count** (descending).
 
 - **[scikit-learn](https://github.com/scikit-learn/scikit-learn)** [<img src="https://img.shields.io/github/stars/scikit-learn/scikit-learn?style=social&color=white" alt="scikit-learn stars"/>](https://github.com/scikit-learn/scikit-learn/stargazers)  
   📦 Core machine learning framework in Python used for building custom regression, feature engineering, and demand forecasting pipelines.
@@ -89,7 +89,7 @@ Repositories below are sorted by **GitHub Star Count** (descending).
 ## 🛠️ How to Contribute
 
 1. 🍴 Fork the repository.
-2. 📝 Add or edit entries in `README.md` (maintain tabular structure for SaaS, or star badges for Open Source).
+2. 📝 Add or edit entries in `README.md` (maintain tabular structure for SaaS, or Stars_Badges for Open Source).
 3. 🔗 Include verified product links, concise descriptions, and accurate metrics.
 4. 🚀 Open a Pull Request (PR) with a description of your updates.
 
